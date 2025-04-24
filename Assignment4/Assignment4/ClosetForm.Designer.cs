@@ -1,6 +1,6 @@
 ﻿namespace Assignment4
 {
-    partial class Form1
+    partial class ClosetForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,34 +28,38 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.button1 = new System.Windows.Forms.Button();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ClosetForm));
+            this.lblWelcomeMsg = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // button1
+            // lblWelcomeMsg
             // 
-            this.button1.Location = new System.Drawing.Point(12, 64);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(126, 49);
-            this.button1.TabIndex = 0;
-            this.button1.Text = "Hello Button";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.lblWelcomeMsg.AutoSize = true;
+            this.lblWelcomeMsg.Location = new System.Drawing.Point(12, 24);
+            this.lblWelcomeMsg.Name = "lblWelcomeMsg";
+            this.lblWelcomeMsg.Size = new System.Drawing.Size(157, 20);
+            this.lblWelcomeMsg.TabIndex = 0;
+            this.lblWelcomeMsg.Text = "Welcome <this.user>";
             // 
-            // Form1
+            // ClosetForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button1);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Controls.Add(this.lblWelcomeMsg);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Name = "ClosetForm";
+            this.Tag = "";
+            this.Text = "ClosetForm";
+            this.Load += new System.EventHandler(this.ClosetForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label lblWelcomeMsg;
     }
 }
 

@@ -7,19 +7,24 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Assignment4.Models;
 
 namespace Assignment4
 {
-    public partial class Form1 : Form
+    public partial class ClosetForm : Form
     {
-        public Form1()
+        private string userId;
+        private User[] users;
+        public ClosetForm(string userId, User[] users)
         {
             InitializeComponent();
+            this.userId = userId;
+            this.users = users;
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void ClosetForm_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("Hello!");
+
         }
     }
 }
