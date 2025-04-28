@@ -4,6 +4,7 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -20,6 +21,12 @@ namespace Assignment4
             this.users = users;
         }
 
+        private void LoginForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Application.Exit();
+        }
+
+
         private void btnLogin_Click(object sender, EventArgs e)
         {
             string email = txtEmail.Text;
@@ -29,7 +36,7 @@ namespace Assignment4
             if (index != -1)
             {
                 string userId = users[index].User_id;
-                this.Hide(); //hide login
+                this.Hide(); //close login
                 ClosetForm main = new ClosetForm(userId, users); //passing user info
                 main.Show();
             }
@@ -49,6 +56,14 @@ namespace Assignment4
                 }
             }
             return -1; // Return -1 if no match is found
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            string userId = users[0].User_id;
+            this.Hide(); //hide login
+            ClosetForm main = new ClosetForm(userId, users); //passing user info
+            main.Show();
         }
     }
 }
