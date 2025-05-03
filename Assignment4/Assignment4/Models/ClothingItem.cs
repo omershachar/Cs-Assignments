@@ -19,7 +19,7 @@ namespace Assignment4.Models
         Winter = 4,
         Spring = 8
     }
-    class ClothingItem
+    public class ClothingItem
     {
         public static uint id_counter = 1;
 

@@ -35,9 +35,10 @@ namespace Assignment4
             int index = CheckCredentials(email, password);
             if (index != -1)
             {
-                string userId = users[index].User_id;
+                User currentUser = users[index];
+                string userId = currentUser.User_id;
                 this.Hide(); //close login
-                ClosetForm main = new ClosetForm(userId, users); //passing user info
+                ClosetForm main = new ClosetForm(currentUser, users); //passing user info
                 main.Show();
             }
             else
@@ -62,7 +63,7 @@ namespace Assignment4
         {
             string userId = users[0].User_id;
             this.Hide(); //hide login
-            ClosetForm main = new ClosetForm(userId, users); //passing user info
+            ClosetForm main = new ClosetForm(users[0], users); //passing user info
             main.Show();
         }
     }

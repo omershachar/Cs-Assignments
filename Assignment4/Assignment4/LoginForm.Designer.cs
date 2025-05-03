@@ -92,7 +92,7 @@
             this.AcceptButton = this.btnLogin;
             resources.ApplyResources(this, "$this");
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
+            this.BackColor = System.Drawing.Color.Bisque;
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.lblLoginPromp);
             this.Controls.Add(this.lblError);
