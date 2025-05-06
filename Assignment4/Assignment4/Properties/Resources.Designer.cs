@@ -63,6 +63,16 @@ namespace Assignment4.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap DancingCloset {
+            get {
+                object obj = ResourceManager.GetObject("DancingCloset", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Wardrobe_picture {
             get {
                 object obj = ResourceManager.GetObject("Wardrobe_picture", resourceCulture);

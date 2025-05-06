@@ -8,6 +8,8 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Assignment4.Models;
+using System.IO;
+using System.Media;
 
 namespace Assignment4
 {
@@ -23,10 +25,32 @@ namespace Assignment4
             this.users = users;
         }
 
+        private Timer danceTimer = new Timer();
+        private int danceStep = 0;
+
         private void ClosetForm_Load(object sender, EventArgs e)
         {
             lblWelcome.Text = $"Welcome, {currentUser.First_name}";
+            baseLeft = closetPictureBox.Left; // שמור את המיקום ההתחלתי
+            LoadDancingGif(); // נטען את הגיף
+            PlayOdeToWardrobe();
+            StartClosetDance();
         }
+        private void LoadDancingGif()
+        {
+            string imagePath = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Resources", "Images", "A_looping_GIF_features_a_dancing_wardrobe_icon_set.png");
+
+            if (File.Exists(imagePath))
+            {
+                closetPictureBox.Image = Image.FromFile(imagePath);
+                ImageAnimator.Animate(closetPictureBox.Image, (s, e) => closetPictureBox.Invalidate());
+            }
+            else
+            {
+                MessageBox.Show("Dancing wardrobe image not found.");
+            }
+        }
+
 
         private void ClosetForm_FormClosing(object sender, FormClosingEventArgs e)
         {
@@ -38,6 +62,37 @@ namespace Assignment4
         {
             Application.Exit();
         }
+        private void PlayOdeToWardrobe()
+        {
+            string path = Path.Combine(AppDomain.CurrentDomain.BaseDirectory, "Sounds", "Ode to John's Wardrobe.wav");
+
+            if (File.Exists(path))
+            {
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play(); // Use PlaySync() if you want it to block until finished
+            }
+            else
+            {
+                MessageBox.Show("Could not find the wardrobe anthem.");
+            }
+        }
+
+
+        private void StartClosetDance()
+        {
+            danceTimer.Interval = 200;
+            danceTimer.Tick += DanceStep;
+            danceTimer.Start();
+        }
+
+        private void DanceStep(object sender, EventArgs e)
+        {
+            danceStep++;
+            closetPictureBox.Left = baseLeft + (int)(5 * Math.Sin(danceStep));
+        }
+
+        private int baseLeft = 0; 
+
 
         private void btnAdd_Click(object sender, EventArgs e)
         {

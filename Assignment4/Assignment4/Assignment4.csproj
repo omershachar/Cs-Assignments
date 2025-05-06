@@ -115,5 +115,13 @@
   <ItemGroup>
     <None Include="Resources\Wardrobe_picture.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="Sounds\Ode to John%27s Wardrobe.wav">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\DancingCloset.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
