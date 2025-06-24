@@ -1,0 +1,12 @@
+Galit-Levi-Haifa->3
+Shani-Agiv-Kadima->3
+Hadas-Shamir-Tel_Aviv->1
+Nirit-Goren-Tel_Aviv->0
+Tali-Geron-Tel_Aviv->4
+Galit-Yosef-Hadera->2
+Vered-Tal-Haifa->0
+Meirav-Cohen-Hadera->3
+Shiri-Zaltz-Kadima->4
+Gili-Razel-Haifa->1
+Maya-Miller-Ashkelon->2
+Osnat-Topaz-Ashkelon->4
