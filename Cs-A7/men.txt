@@ -1,0 +1,11 @@
+Asaf-Levi-Haifa->12
+Guy-Tal-Haifa->2
+Mike-Yosef-Hadera->10
+Ben-Zaltz-Kadima->14
+Oren-Razel-Haifa->25
+Oz-Goren-Tel_Aviv->27
+David-Bar-Ashkelon->4
+Shimi-Tavori-Tel_Aviv->58
+Dor-Shamir-Tel_Aviv->50
+Erez-Cohen-Hadera->74
+Benny-Artzi-Ashkelon->15

@@ -113,7 +113,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Wardrobe_picture.png" />
+    <None Include="Resources\Wardrobe_picture.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <Content Include="Sounds\Ode to John%27s Wardrobe.wav">
